@@ -7,6 +7,10 @@ export default function Home() {
       {/* Header */}
       <Header />
 
+      {/* Feed */}
+      
+      {/* Modal */}
+
     </main>
   )
 }

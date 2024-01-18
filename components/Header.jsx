@@ -4,7 +4,7 @@ import { HomeIcon } from "@heroicons/react/solid";
 
 export default function Header() {
   return (
-    <div>
+    <div className="shadow-sm border-b sticky top-0 bg-white z-30">
       <div className="flex items-center justify-between max-w-6xl mx-4 xl:mx-auto">
         {/* Left */}
         <div className="cursor-pointer h-24 w-24 relative hidden lg:inline-grid">
@@ -25,7 +25,7 @@ export default function Header() {
             className="object-contain"
           />
         </div>
-          
+                  
         {/* Middle */}
         <div className="relative mt-1">
           <div className="absolute top-2 left-2">
@@ -39,7 +39,7 @@ export default function Header() {
         </div>
 
         {/* Right */}
-        <div className="flex space-x-4 items-center">
+        <div className="flex gap-4 items-center">
           <HomeIcon
             className="hidden md:inline-flex  h-6 cursor-pointer hover:scale-125 transition-tranform duration-200 ease-out"
           />
