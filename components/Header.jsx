@@ -47,9 +47,9 @@ export default function Header() {
             className="h-6 cursor-pointer hover:scale-125 transition-tranform duration-200 ease-out"
           />
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/800px-Instagram_logo_2016.svg.png"
+            src="https://i.pravatar.cc/150?img=3"
             alt="user-image"
-            className="h-7 rounded-full cursor-pointer"
+            className="h-10 rounded-full cursor-pointer"
           />
         </div>
       </div>

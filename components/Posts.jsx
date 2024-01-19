@@ -6,14 +6,14 @@ export default function Posts() {
       id: 1,
       userName: 'Unimat',
       userImg: 'https://i.pravatar.cc/150?img=3',
-      img: 'https://www.istockphoto.com/hu/fot%C3%B3/h%C5%91l%C3%A9gballonok-rep%C3%BClnek-a-botan-canyon-felett-t%C3%B6r%C3%B6korsz%C3%A1gban-gm1297349747-390509593',
+      img: 'https://images.freeimages.com/images/large-previews/b79/tree-1396794.jpg?fmt=webp&w=500',
       caption: 'Nice picture'
     },
     {
       id: 2,
       userName: 'Aqualing',
       userImg: 'https://i.pravatar.cc/150?img=8',
-      img: 'https://www.istockphoto.com/hu/fot%C3%B3/alberta-vadon-banff-k%C3%B6zel%C3%A9ben-gm583809524-99903401',
+      img: 'https://media.istockphoto.com/id/1141140794/photo/beautiful-mountain-scenery-in-summer-with-lush-green-foliage-and-rain-clouds.webp?s=612x612&w=0&k=20&c=gMKycx9wWxwoolyDmHy-qA8GJMEa2HuYG9JJdLGZvaU=',
       caption: 'Mountains landscape'
     }
   ]
