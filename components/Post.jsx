@@ -3,10 +3,11 @@ import {
   HeartIcon,
   ChatIcon,
   BookmarkIcon,
+  EmojiHappyIcon
 } from "@heroicons/react/outline";
 
 export default function Post(props) {
-  const { key, id, userName, userImg, img, caption} = props
+  const { userName, userImg, img, caption} = props
 
   return (
     <div className="bg-white my-7 border rounded-md">
@@ -33,6 +34,28 @@ export default function Post(props) {
           </div>
           <BookmarkIcon className="btn" />
         </div>
+
+      {/* Post comments */}
+      <p className="p-5 truncate">
+        <span className="font-bold mr-2">{userName}</span>
+        {caption}
+      </p>
+
+      {/* Post input box */}
+      <form className="flex items-center p-4">
+        <EmojiHappyIcon className="h-7" />
+        <input
+          className="border-none flex-1 focus:ring-0"
+          type="text"
+          placeholder="Enter your comment..."
+        />
+        <button
+          className="text-blue-400 font-bold disabled:text-blue-200"
+          type="submit"
+        >
+          Post
+        </button>
+      </form>
 
     </div>
   )
