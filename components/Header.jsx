@@ -1,8 +1,32 @@
+'use client'
+
 import Image from 'next/image';
+import { useRouter } from "next/navigation";
 import { SearchIcon, PlusCircleIcon } from "@heroicons/react/outline";
 import { HomeIcon } from "@heroicons/react/solid";
+import { UserAuth } from '@/app/context/AuthContext';
 
 export default function Header() {
+  const {user, googleSignIn, logOut} = UserAuth()
+  // console.log(user)
+  const router = useRouter();
+
+  // const handleSignIn = async () => {
+  //   try {
+  //     await googleSignIn()
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
+
+  const handleSignOut = async () => {
+    try{
+      await logOut()
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  
   return (
     <div className="shadow-sm border-b sticky top-0 bg-white z-30">
       <div className="flex items-center justify-between max-w-6xl mx-4 xl:mx-auto">
@@ -43,14 +67,25 @@ export default function Header() {
           <HomeIcon
             className="hidden md:inline-flex  h-6 cursor-pointer hover:scale-125 transition-tranform duration-200 ease-out"
           />
-          <PlusCircleIcon
-            className="h-6 cursor-pointer hover:scale-125 transition-tranform duration-200 ease-out"
-          />
-          <img
-            src="https://i.pravatar.cc/150?img=3"
-            alt="user-image"
-            className="h-10 rounded-full cursor-pointer"
-          />
+          {user ? (
+            <>
+              <PlusCircleIcon
+                className="h-6 cursor-pointer hover:scale-125 transition-tranform duration-200 ease-out"
+              />
+              <img
+                src={user?.photoURL}
+                // src="https://i.pravatar.cc/150?img=3"
+                alt="user-image"
+                className="h-10 rounded-full cursor-pointer"
+                onClick={ handleSignOut } 
+              />
+            </>
+          ) : (
+            // Redirect to my own SignIn Page
+            <button onClick={() => router.push("/auth/signin")}>Sign in</button>
+            // Call googleSignIn() function directly
+            // <button onClick={handleSignIn}>Sign in</button>
+          )}
         </div>
       </div>
     </div>
