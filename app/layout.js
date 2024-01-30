@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
 import { AuthContextProvider } from './context/AuthContext'
+// import { RecoilRoot } from 'recoil'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })

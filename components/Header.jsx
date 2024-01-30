@@ -11,13 +11,13 @@ export default function Header() {
   // console.log(user)
   const router = useRouter();
 
-  // const handleSignIn = async () => {
-  //   try {
-  //     await googleSignIn()
-  //   } catch (error) {
-  //     console.log(error)
-  //   }
-  // }
+  const handleSignIn = async () => {
+    try {
+      await googleSignIn()
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   const handleSignOut = async () => {
     try{
@@ -82,9 +82,9 @@ export default function Header() {
             </>
           ) : (
             // Redirect to my own SignIn Page
-            <button onClick={() => router.push("/auth/signin")}>Sign in</button>
+            // <button onClick={() => router.push("/auth/signin")}>Sign in</button>
             // Call googleSignIn() function directly
-            // <button onClick={handleSignIn}>Sign in</button>
+            <button onClick={handleSignIn}>Sign in</button>
           )}
         </div>
       </div>
